@@ -1,10 +1,10 @@
-import puppeteer from "puppeteer";
-import readlineSync from "readline-sync";
-import ObjectsToCsv from "objects-to-csv";
-import neatCsv from "neat-csv";
-import fs from "fs";
+const puppeteer = require("puppeteer");
+const readlineSync = require("readline-sync");
+const ObjectsToCsv = require("objects-to-csv");
+//const neatCsv = require("neat-csv");
+const fs = require("fs");
 
-async function robo() {
+export async function robo() {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   const moedaBase = "bitcoin";
@@ -52,13 +52,13 @@ async function readValue() {
 
   const dateCompleted = day + "-" + month + "-" + year;
 
-  fs.readFile(`${dateCompleted}.csv`, async (err, data) => {
+  /*fs.readFile(`${dateCompleted}.csv`, async (err, data) => {
     if (err) {
       console.error(err);
       return;
     }
     console.log(await neatCsv(data));
-  });
+  });*/
 }
 
 setInterval(() => {

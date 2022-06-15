@@ -4,7 +4,7 @@ const ObjectsToCsv = require("objects-to-csv");
 //const neatCsv = require("neat-csv");
 const fs = require("fs");
 
-export async function robo() {
+export default async function robo() {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   const moedaBase = "bitcoin";

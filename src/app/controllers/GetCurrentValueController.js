@@ -1,4 +1,4 @@
-import robo from "../../functions";
+const robo = require("../../functions");
 
 class GetCurrentValueController {
   async index(req, res) {

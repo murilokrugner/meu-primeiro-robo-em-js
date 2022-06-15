@@ -1,7 +1,7 @@
-import express from "express";
+const express = require("express");
 
-import routes from "./routes";
-import cors from "cors";
+const routes = require("./routes");
+const cors = require("cors");
 
 const app = express();
 const server = require("http").Server(app);

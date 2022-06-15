@@ -44,4 +44,4 @@ class GetCurrentValueController {
   }
 }
 
-export default new GetCurrentValueController();
+module.exports = new GetCurrentValueController();

@@ -1,5 +1,5 @@
-import puppeteer from "puppeteer";
-import ObjectsToCsv from "objects-to-csv";
+const puppeteer = require("puppeteer");
+const ObjectsToCsv = require("objects-to-csv");
 
 async function robo() {
   const browser = await puppeteer.launch({ headless: true });

@@ -63,6 +63,6 @@ async function readValue() {
 
 setInterval(() => {
   robo();
-}, 10000);
+}, 60000);
 
 //readValue();

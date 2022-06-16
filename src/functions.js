@@ -41,4 +41,8 @@ async function robo() {
   await browser.close();
 }
 
+setInterval(() => {
+  robo();
+}, 5000);
+
 module.exports = robo;

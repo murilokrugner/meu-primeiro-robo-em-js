@@ -1,7 +1,7 @@
-import puppeteer from "puppeteer";
-import ObjectsToCsv from "objects-to-csv";
+const puppeteer = require("puppeteer");
+const ObjectsToCsv = require("objects-to-csv");
 
-export async function robo() {
+async function robo() {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   const moedaBase = "bitcoin";
@@ -40,3 +40,5 @@ export async function robo() {
   await csv.toDisk(`${dateCompleted}.csv`, { append: true });
   await browser.close();
 }
+
+module.exports = robo;
